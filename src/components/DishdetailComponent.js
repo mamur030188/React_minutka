@@ -29,7 +29,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
         if(comments != null)
             return (
                 <div className="col-12 col-md-5 m-1">
-                    <h4>Comments</h4>
+                    <h4>Comments <i class="fa fa-comments-o" aria-hidden="true"></i></h4>
                     <ul className="list-unstyled">
                         {comments.map((comment) => {
                             return (

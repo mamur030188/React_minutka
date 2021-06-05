@@ -60,12 +60,12 @@ class Header extends Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/menu">
-                                    <span className="fa fa-list fa-lg"></span> Menu
+                                    <span className="fa fa-coffee fa-lg"></span> Menu
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/contactus">
-                                    <span className="fa fa-address-card fa-lg"></span> Contact Us
+                                    <span className="fa fa-address-card-o fa-lg"></span> Contact Us
                                 </NavLink>
                             </NavItem>
                         </Nav>
@@ -83,8 +83,10 @@ class Header extends Component {
                             <div className="col-12 col-sm-6">
                                 <h1>Cafe Minutka</h1>
                                 <p>We take inspiration from the best cuisines, and create a unique experience. Our lipsmacking creations will tickle your senses!</p>
-                            </div>
-
+                            </div> 
+                            <div className="col-12 col-sm align-self-center"> 
+                                <img src="assets/images/logo-minutka.png" height="180" width="300" alt="Cafe Minutka" />   
+                            </div>                          
                         </div>
                     </div>
                 </Jumbotron>
