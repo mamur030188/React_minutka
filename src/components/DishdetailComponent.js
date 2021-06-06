@@ -8,16 +8,22 @@ import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 
-const maxLength = (len) => (val) => !(val) || (val.length <= len);
-const minLength = (len) => (val) => val && (val.length >= len);
-
-    function RenderDish({dish}) {
+    function RenderDish({dish, favorite, postFavorite}) {
                 
         return (
             <div className="col-12 col-md-5 m-1">
                 <FadeTransform in transformProps={{ exitTransform: 'scale(0.5) translateY(-50%)' }}>
                     <Card>
                         <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                        <CardImgOverlay>
+                            <Button outline color="primary" onClick={() => favorite ? console.log('Already favorite') : postFavorite(dish._id)}>
+                                {favorite ?
+                                    <span className="fa fa-heart"></span>
+                                    : 
+                                    <span className="fa fa-heart-o"></span>
+                                }
+                            </Button>
+                        </CardImgOverlay>
                         <CardBody>
                             <CardTitle>{dish.name}</CardTitle>
                             <CardText>{dish.description}</CardText>
@@ -179,7 +185,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
                         <RenderDish dish={props.dish} />
                         <RenderComments comments={props.comments}
                             postComment={props.postComment}
-                            dishId={props.dish.id} />
+                            dishId={props.dish._id} />
                     </div>
                 </div>            
             );
