@@ -2,8 +2,8 @@ export const DISHES =
     [
         {
         id: 0,
-        name:'Dodapizza',
-        image: 'assets/images/dodapizza.png',
+        name:"Dodapizza",
+        image: "assets/images/dodapizza.png",
         category: 'mains',
         label:'Hot',
         price:'8.990',
